@@ -54,7 +54,7 @@ function loadModel(model){
             pmremGenerator.dispose();
             render();
 
-            var loader = new GLTFLoader().setPath('./public/3d/');
+            var loader = new GLTFLoader().setPath('public/3d/');
             loader.load(model + ".glb" , function(glb){
                 current_object = glb.scene;
                 scene.add(current_object);
