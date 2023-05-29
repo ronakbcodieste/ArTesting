@@ -45,7 +45,7 @@ $("#ARButton").click(function(){
 function loadModel(model){
     new RGBELoader()
         .setDataType(THREE.FloatType)
-        .setPath('./textures/')
+        .setPath('textures/')
         .load('photo_studio_01_1k.hdr', function(texture){
             var envmap = pmremGenerator.fromEquirectangular(texture).texture;
             
