@@ -4,7 +4,7 @@ import { ARButton } from './jsm/webxr/ARButton.js';
 
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
-import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+// import { RGBELoader } from './jsm/loaders/RGBELoader.js';
 // import { RoughnessMipmapper } from './threejsjsm/utilsnew/RoughnessMipmapper.js';
 
 let container;
@@ -43,15 +43,15 @@ $("#ARButton").click(function(){
 //   });
 
 function loadModel(model){
-    new RGBELoader()
-        .setDataType(THREE.FloatType)
-        // .setPath('./public/')
-        .load('photo.hdr', function(texture){
-            var envmap = pmremGenerator.fromEquirectangular(texture).texture;
+    // new RGBELoader()
+    //     .setDataType(THREE.FloatType)
+    //     // .setPath('./public/')
+    //     .load('photo.hdr', function(texture){
+    //         var envmap = pmremGenerator.fromEquirectangular(texture).texture;
             
-            scene.environment = envmap;
-            texture.dispose();
-            pmremGenerator.dispose();
+    //         scene.environment = envmap;
+    //         texture.dispose();
+    //         pmremGenerator.dispose();
             render();
 
             var loader = new GLTFLoader().setPath('public/3d/');
@@ -69,7 +69,7 @@ function loadModel(model){
 
                 render();
             });
-        });
+        // });
 }
 
 function init() {
