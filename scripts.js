@@ -46,7 +46,7 @@ function loadModel(model){
     new RGBELoader()
         .setDataType(THREE.FloatType)
         .setPath('./public/')
-        .load('photo_studio_01_1k.hdr', function(texture){
+        .load('photo.hdr', function(texture){
             var envmap = pmremGenerator.fromEquirectangular(texture).texture;
             
             scene.environment = envmap;
